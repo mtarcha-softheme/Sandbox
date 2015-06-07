@@ -5,6 +5,10 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sandbox", "Sandbox\Sandbox.csproj", "{AF504D05-00B1-405D-9064-59787B081B2B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcProject", "MvcProject\MvcProject.csproj", "{A6AA684F-608B-43A3-9AA0-022BF00E6491}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvpProject", "MvpProject\MvpProject.csproj", "{CBC28C56-2675-48C5-A11F-4D2D7C84F36F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{AF504D05-00B1-405D-9064-59787B081B2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AF504D05-00B1-405D-9064-59787B081B2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AF504D05-00B1-405D-9064-59787B081B2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6AA684F-608B-43A3-9AA0-022BF00E6491}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6AA684F-608B-43A3-9AA0-022BF00E6491}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6AA684F-608B-43A3-9AA0-022BF00E6491}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6AA684F-608B-43A3-9AA0-022BF00E6491}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBC28C56-2675-48C5-A11F-4D2D7C84F36F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBC28C56-2675-48C5-A11F-4D2D7C84F36F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBC28C56-2675-48C5-A11F-4D2D7C84F36F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBC28C56-2675-48C5-A11F-4D2D7C84F36F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
