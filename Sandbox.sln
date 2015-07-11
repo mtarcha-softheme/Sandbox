@@ -3,11 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sandbox", "Sandbox\Sandbox.csproj", "{AF504D05-00B1-405D-9064-59787B081B2B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sandbox", "Mvp-Mvc-AndSomeGarbage\Sandbox\Sandbox.csproj", "{AF504D05-00B1-405D-9064-59787B081B2B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcProject", "MvcProject\MvcProject.csproj", "{A6AA684F-608B-43A3-9AA0-022BF00E6491}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcProject", "Mvp-Mvc-AndSomeGarbage\MvcProject\MvcProject.csproj", "{A6AA684F-608B-43A3-9AA0-022BF00E6491}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvpProject", "MvpProject\MvpProject.csproj", "{CBC28C56-2675-48C5-A11F-4D2D7C84F36F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvpProject", "Mvp-Mvc-AndSomeGarbage\MvpProject\MvpProject.csproj", "{CBC28C56-2675-48C5-A11F-4D2D7C84F36F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Mvp-Mvc-AndSomeGarbage", "Mvp-Mvc-AndSomeGarbage", "{24A92D70-47B3-4EC4-A257-F8B4C26BDD08}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Study", "Study", "{46BA76B3-512C-46B0-8C09-91A141E3387C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,5 +34,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A6AA684F-608B-43A3-9AA0-022BF00E6491} = {24A92D70-47B3-4EC4-A257-F8B4C26BDD08}
+		{CBC28C56-2675-48C5-A11F-4D2D7C84F36F} = {24A92D70-47B3-4EC4-A257-F8B4C26BDD08}
+		{AF504D05-00B1-405D-9064-59787B081B2B} = {24A92D70-47B3-4EC4-A257-F8B4C26BDD08}
 	EndGlobalSection
 EndGlobal
