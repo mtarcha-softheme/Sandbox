@@ -1,0 +1,16 @@
+D:\Stading\Sandbox\MvpProject\bin\Debug\MvpProject.exe.config
+D:\Stading\Sandbox\MvpProject\bin\Debug\MvpProject.exe
+D:\Stading\Sandbox\MvpProject\bin\Debug\MvpProject.pdb
+D:\Stading\Sandbox\MvpProject\obj\Debug\MvpProject.View.resources
+D:\Stading\Sandbox\MvpProject\obj\Debug\MvpProject.Properties.Resources.resources
+D:\Stading\Sandbox\MvpProject\obj\Debug\MvpProject.csproj.GenerateResource.Cache
+D:\Stading\Sandbox\MvpProject\obj\Debug\MvpProject.exe
+D:\Stading\Sandbox\MvpProject\obj\Debug\MvpProject.pdb
+D:\Stading\Sandbox\Mvp-Mvc-AndSomeGarbage\MvpProject\bin\Debug\MvpProject.exe.config
+D:\Stading\Sandbox\Mvp-Mvc-AndSomeGarbage\MvpProject\bin\Debug\MvpProject.exe
+D:\Stading\Sandbox\Mvp-Mvc-AndSomeGarbage\MvpProject\bin\Debug\MvpProject.pdb
+D:\Stading\Sandbox\Mvp-Mvc-AndSomeGarbage\MvpProject\obj\Debug\MvpProject.View.resources
+D:\Stading\Sandbox\Mvp-Mvc-AndSomeGarbage\MvpProject\obj\Debug\MvpProject.Properties.Resources.resources
+D:\Stading\Sandbox\Mvp-Mvc-AndSomeGarbage\MvpProject\obj\Debug\MvpProject.csproj.GenerateResource.Cache
+D:\Stading\Sandbox\Mvp-Mvc-AndSomeGarbage\MvpProject\obj\Debug\MvpProject.exe
+D:\Stading\Sandbox\Mvp-Mvc-AndSomeGarbage\MvpProject\obj\Debug\MvpProject.pdb
