@@ -40,7 +40,7 @@ namespace AlgoLib_1
         {
             var sw = new Stopwatch();
             sw.Start();
-            var result = SearchAlgorithms.BinarySearch(_testArray, key, e => e.Key);
+            var result = SearchAlgorithms.BinarySearch(_testArray, key, e => e.Key, new IntComparer());
             sw.Stop();
             Console.WriteLine("Elapsed time = {0} ticks.", sw.ElapsedTicks);
 
@@ -56,7 +56,7 @@ namespace AlgoLib_1
         {
             var sw = new Stopwatch();
             sw.Start();
-            var result = SearchAlgorithms.BinarySearch(_testList, key, e => e.Key);
+            var result = SearchAlgorithms.BinarySearch(_testList, key, e => e.Key, new IntComparer());
             sw.Stop();
             Console.WriteLine("Elapsed time = {0} ticks.", sw.ElapsedTicks);
 
@@ -68,14 +68,14 @@ namespace AlgoLib_1
         public void BinarySearch_NotSortedArrayTest()
         {
             _testArray[50] = new MyTestClass { Key = 5 };
-            SearchAlgorithms.BinarySearch(_testArray, 2, e => e.Key);
+            SearchAlgorithms.BinarySearch(_testArray, 2, e => e.Key, new IntComparer());
         }
 
         [ExpectedException(typeof(InvalidOperationException))]
         [Test]
         public void BinarySearch_KeyDoesNotExistTest()
         {
-            SearchAlgorithms.BinarySearch(_testArray, 100, e => e.Key);
+            SearchAlgorithms.BinarySearch(_testArray, 100, e => e.Key, new IntComparer());
         }
 
         private class MyTestClass

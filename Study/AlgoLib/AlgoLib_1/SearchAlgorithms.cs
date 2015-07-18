@@ -6,30 +6,27 @@ namespace AlgoLib_1
 {
     public class SearchAlgorithms
     {
-        public static TSource BinarySearch<Tkey, TSource>(IList<TSource> list, Tkey key, Func<TSource, Tkey> getKey)
-            where Tkey : IComparable<Tkey>
+        public static TSource BinarySearch<Tkey, TSource>(IList<TSource> list, Tkey key, Func<TSource, Tkey> getKey, IComparer<Tkey> comparer)
         {
-            Validate(list, getKey);
+            Validate(list, getKey, comparer);
 
-            return BinarySearchInternal(list, key, getKey, 0, list.Count - 1);
+            return BinarySearchInternal(list, key, getKey, 0, list.Count - 1, comparer);
         }
 
-        public static TSource BinarySearch<Tkey, TSource>(TSource[] array, Tkey key, Func<TSource, Tkey> getKey)
-            where Tkey : IComparable<Tkey>
+        public static TSource BinarySearch<Tkey, TSource>(TSource[] array, Tkey key, Func<TSource, Tkey> getKey, IComparer<Tkey> comparer)
         {
-            Validate(array, getKey);
+            Validate(array, getKey, comparer);
 
-            return BinarySearchInternal(array, key, getKey, 0, array.Length - 1);
+            return BinarySearchInternal(array, key, getKey, 0, array.Length - 1, comparer);
         }
 
-        private static TSource BinarySearchInternal<Tkey, TSource>(IList<TSource> list, Tkey key, Func<TSource, Tkey> getKey, int leftIndex, int rightIndex)
-            where Tkey : IComparable<Tkey>
+        private static TSource BinarySearchInternal<Tkey, TSource>(IList<TSource> list, Tkey key, Func<TSource, Tkey> getKey, int leftIndex, int rightIndex, IComparer<Tkey>  comparer)
         {
             var mid =  (leftIndex + rightIndex) / 2;
 
             if(leftIndex == rightIndex)
             {
-                if(getKey(list[mid]).CompareTo(key) != 0)
+                if(comparer.Compare(getKey(list[mid]), key) != 0)
                 {
                     throw new InvalidOperationException("Value is not found.");
                 }
@@ -39,23 +36,22 @@ namespace AlgoLib_1
                 }
             }
 
-            if (getKey(list[mid]).CompareTo(key) < 0)
+            if (comparer.Compare(getKey(list[mid]), key) < 0)
             {
-                return BinarySearchInternal(list, key, getKey, mid + 1, rightIndex);
+                return BinarySearchInternal(list, key, getKey, mid + 1, rightIndex, comparer);
             }
 
-            return BinarySearchInternal(list, key, getKey, leftIndex, mid);
+            return BinarySearchInternal(list, key, getKey, leftIndex, mid, comparer);
         }
 
-        private static void Validate<Tkey, TSource>(IEnumerable<TSource> list, Func<TSource, Tkey> getKey)
-             where Tkey : IComparable<Tkey>
+        private static void Validate<Tkey, TSource>(IEnumerable<TSource> list, Func<TSource, Tkey> getKey, IComparer<Tkey> comparer)
         {
             TSource previous = list.First();
             list.GetEnumerator().MoveNext();
 
             foreach (var item in list)
             {
-                if (getKey(item).CompareTo(getKey(previous)) < 0)
+                if (comparer.Compare(getKey(item), getKey(previous)) < 0)
                 {
                     throw new ArgumentException("List or array is not sorted by encreasing!");
                 }
