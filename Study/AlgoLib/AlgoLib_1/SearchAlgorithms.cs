@@ -13,6 +13,13 @@ namespace AlgoLib_1
             return BinarySearchInternal(list, key, getKey, 0, list.Count - 1, comparer);
         }
 
+        public static TSource BinarySearch<Tkey, TSource>(TSource[] array, Tkey key, Func<TSource, Tkey> getKey, IComparer<Tkey> comparer)
+        {
+            Validate(array, getKey, comparer);
+
+            return BinarySearchInternal(array, key, getKey, 0, array.Length - 1, comparer);
+        }
+
         private static TSource BinarySearchInternal<Tkey, TSource>(IList<TSource> list, Tkey key, Func<TSource, Tkey> getKey, int leftIndex, int rightIndex, IComparer<Tkey>  comparer)
         {
             var mid =  (leftIndex + rightIndex) / 2;

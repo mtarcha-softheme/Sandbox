@@ -1,7 +1,0 @@
-D:\Stading\Sandbox\Study\AlgoLib\AlgoLib_1\bin\Debug\AlgoLib_1.dll
-D:\Stading\Sandbox\Study\AlgoLib\AlgoLib_1\bin\Debug\AlgoLib_1.pdb
-D:\Stading\Sandbox\Study\AlgoLib\AlgoLib_1\obj\Debug\AlgoLib_1.dll
-D:\Stading\Sandbox\Study\AlgoLib\AlgoLib_1\obj\Debug\AlgoLib_1.pdb
-D:\Stading\Sandbox\Study\AlgoLib\AlgoLib_1\bin\Debug\nunit.framework.dll
-D:\Stading\Sandbox\Study\AlgoLib\AlgoLib_1\bin\Debug\nunit.framework.xml
-D:\Stading\Sandbox\Study\AlgoLib\AlgoLib_1\obj\Debug\AlgoLib_1.csprojResolveAssemblyReference.cache
