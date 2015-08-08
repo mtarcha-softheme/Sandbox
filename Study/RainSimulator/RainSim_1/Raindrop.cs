@@ -15,8 +15,6 @@ namespace RainSim_1
     {
         private readonly Color _color;
         private readonly IList<Coordinate> _dropCoordinates;
-        private readonly object _moveLock = new object();
-        private readonly object _addLock = new object();
 
         public Raindrop(Color color)
         {
@@ -36,27 +34,21 @@ namespace RainSim_1
 
         public void Move(Coordinate from, Coordinate to)
         {
-            lock (_moveLock)
+            if (_dropCoordinates.Contains(from))
             {
-                if (_dropCoordinates.Contains(from))
-                {
-                    _dropCoordinates.Remove(from);
-                    _dropCoordinates.Add(to);
+                _dropCoordinates.Remove(from);
+                _dropCoordinates.Add(to);
 
-                    OnDropMoved(new DropMovedEventArgs(from, to));
-                }
+                OnDropMoved(new DropMovedEventArgs(from, to));
             }
         }
 
         public void AddCoordinate(Coordinate dropCoordinate)
         {
-            lock (_addLock)
+            if (!_dropCoordinates.Contains(dropCoordinate))
             {
-                if (!_dropCoordinates.Contains(dropCoordinate))
-                {
-                    _dropCoordinates.Add(dropCoordinate);
-                    OnDropAdded(new DropAddedEventArgs(dropCoordinate));
-                }
+                _dropCoordinates.Add(dropCoordinate);
+                OnDropAdded(new DropAddedEventArgs(dropCoordinate));
             }
         }
 

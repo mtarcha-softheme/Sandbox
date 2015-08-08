@@ -4,24 +4,31 @@
 // <author>Ivan Ivchenko</author>
 // <author>Myroslava Tarcha</author>
 
-using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Drawing;
 
 namespace RainSim_1
 {
-    public static class DropFactory
+    public sealed class DropFactory : IDropFactory
     {
-        private static readonly ConcurrentDictionary<Color, Raindrop> RainDropsStorage = new ConcurrentDictionary<Color, Raindrop>();
+        private static readonly Dictionary<Color, Raindrop> RainDropsStorage = new Dictionary<Color, Raindrop>();
 
-        public static Raindrop GetRaindrop(Color color)
-        {
-            return RainDropsStorage.GetOrAdd(color, color1 => new Raindrop(color1));
-        }
-
-        public static IEnumerable<Raindrop> GetAll 
+        public IEnumerable<Raindrop> GetAllDrops
         {
             get { return new List<Raindrop>(RainDropsStorage.Values); }
+        }
+
+        public  Raindrop GetRaindrop(Color color)
+        {
+            if (RainDropsStorage.ContainsKey(color))
+            {
+                return RainDropsStorage[color];
+            }
+
+            var newDrop = new Raindrop(color);
+            RainDropsStorage.Add(color, newDrop);
+
+            return newDrop;
         }
     }
 }

@@ -3,14 +3,16 @@
 // </copyright>
 // <author>Ivan Ivchenko</author>
 // <author>Myroslava Tarcha</author>
+
+using System.Collections.Generic;
+using System.Drawing;
+
 namespace RainSim_1
 {
-    public interface IRainManager
+    public interface IDropFactory
     {
-        void CreateRainDrops(int count);
+        IEnumerable<Raindrop> GetAllDrops { get; } 
 
-        void StartDropsMoving();
-
-        void StopDrops();
+        Raindrop GetRaindrop(Color color);
     }
 }

@@ -46,6 +46,7 @@
     <Compile Include="DropAddedEventArgs.cs" />
     <Compile Include="DropFactory.cs" />
     <Compile Include="DropMovedEventArgs.cs" />
+    <Compile Include="IDropFactory.cs" />
     <Compile Include="IDropViewer.cs" />
     <Compile Include="IRainManager.cs" />
     <Compile Include="Program.cs" />

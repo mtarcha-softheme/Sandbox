@@ -11,12 +11,13 @@ namespace RainSim_1
     {
         public static void Main(string[] args)
         {
-            var viewer = new RainViewer();
-            var manager = new RainManager(Console.WindowWidth, Console.WindowHeight, viewer);
-            manager.CreateRainDrops(40);
+            var manager = new RainManager(Console.WindowWidth, Console.WindowHeight, new RainViewer(), new DropFactory());
 
-            Task.Run(() => manager.MoveDrops());
+            manager.CreateRainDrops(40);
+            manager.StartDropsMoving();
+
             Console.ReadKey();
+            manager.StopDrops();
         }
     }
 }
